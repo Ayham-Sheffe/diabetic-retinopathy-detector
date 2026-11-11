@@ -26,8 +26,6 @@ class PatientData(BaseModel):
     DiffWalk: int
     Sex: int
     Age: int
-    Education: int
-    Income: int
 
 
 @app.get("/")

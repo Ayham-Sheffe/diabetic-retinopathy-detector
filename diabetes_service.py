@@ -12,10 +12,7 @@ class DiabetesService:
         self.threshold = bundle["threshold"]
 
     def preprocess(self, data):
-        return pd.DataFrame(
-            [[data[name] for name in self.features]],
-            columns=self.features
-        )
+        return pd.DataFrame([data], columns=self.features)
 
     def predict(self, data):
         features = self.preprocess(data)
